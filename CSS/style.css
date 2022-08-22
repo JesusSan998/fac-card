@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(180deg, var(--soft-violet), var(--soft-blue));
+    height: 100%;
+    font-size: 12px;
+}
+
+.container{
+    width: 330px;
+    min-height: 536px;
+    background-color: #fff;
+    margin: 147px auto 70px;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 10px 50px var(--very-dark-desaturated-blue);
+}
+
+.section1__img{
+    display: block;
+    width: 240px;
+    margin: -130px auto 0;
+}
+
+.section1__shadow{
+    content: url('../images/bg-pattern-mobile.svg');
+    margin: -75px auto 0;
+    width: 240px;
+}
+
+.section2__title{
+    margin: 24px 0 30px;
+    font-size: 2.6em;
+    text-align: center;
+}
+
+.section2__details{
+    margin: 16px 0;
+    font-size: 1.1em;
+    position: relative;
+}
+
+.section2__details:hover{
+    color: var(--soft-red);
+    cursor: pointer;
+}
+
+.section2__details[open]{
+    font-weight: 700;
+}
+
+.section2__details[open] .section2__arrow{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.section2__sumary{
+    list-style: none;
+}
+
+.section2__arrow{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transition: 300ms;
+}
+
+.section2__line{
+    border-color: transparent;
+    border-bottom-color: var(--light-grayish-blue);
+}
+
+.section2__paragraph{
+    color: var(--dark-grayish-blue);
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+@media (min-width:1044px){
+    .container{
+        width: 924px;
+        margin: 100px auto;
+        display: flex;
+        background-image: url('../images/bg-pattern-desktop.svg');
+        background-position-x: -536px;
+        background-position-y: -281px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .section1, .section2{
+        width: 100%;
+    }
+
+    .section1__img{
+        width: 474px;
+        margin: 30px 0 0 -110px;
+    }
+
+    .section1__shadow{
+        content: '';
+    }
+
+    .section2{
+        padding: 15px 80px 20px 40px;
+    }
+
+    .section2__title{
+        text-align: left;
+        margin-bottom: 32px;
+    }
+
+    .section2__details{
+        margin: 18px 0;
+    }
+}
